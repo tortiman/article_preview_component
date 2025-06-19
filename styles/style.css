@@ -119,3 +119,24 @@ body{
 }
 
 /* Responsive design */
+
+@media (width<850px){
+    .main{
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        margin: 20px;
+        
+    }
+
+    .image{
+        height: 50%;
+    }
+}
