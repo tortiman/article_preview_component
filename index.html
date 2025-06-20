@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="/styles/style.css" />
     <script src="/js/script.js" defer></script>
     <title>Frontend Mentor | Article preview component</title>
@@ -44,7 +48,36 @@
                 <p class="date">28 Jun 2020</p>
               </div>
             </div>
-            <img src="/images/icon-share.svg" alt="" class="share" />
+            <div class="share-container">
+              <!-- El tooltip con los iconos sociales (inicialmente oculto) -->
+              <div id="social" class="social-tooltip">
+                <span>SHARE</span>
+                <a href="#" aria-label="Share on Facebook"
+                  ><i class="fab fa-facebook-square" style="color: #ffffff"></i
+                ></a>
+                <a href="#" aria-label="Share on Twitter"
+                  ><i class="fab fa-twitter" style="color: #ffffff"></i
+                ></a>
+                <a href="#" aria-label="Share on Pinterest"
+                  ><i class="fab fa-pinterest" style="color: #ffffff"></i
+                ></a>
+              </div>
+
+              <!-- El botón que activa el tooltip -->
+              <button
+                id="button-social"
+                class="share-button"
+                aria-label="Show share options"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    fill="#6E8098"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- <img src="/images/icon-share.svg" alt="" class="share" /> -->
           </div>
         </div>
       </article>

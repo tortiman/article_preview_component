@@ -35,6 +35,7 @@ body{
     height: 35%;
     grid-template-columns: 290px 450px;
     box-shadow: 70px 40px 60px rgba(0, 0, 0, 0.1);
+
 }
 
 .image{
@@ -102,19 +103,6 @@ body{
     font-weight: 500;
 }
 
-.share{
-    
-    background-color: var(--LightGrayishBlue);
-    padding: 8px;
-    border-radius: 50%;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.share:hover{
-    background-color: hsl(212, 23%, 69%);
-}
-
 
 .name{
     font-size: 13px;
@@ -125,6 +113,74 @@ body{
 .date{
     font-size: 13px;
     color: var(--GrayishBlue);
+}
+
+.share-button{
+    border: none;
+    background-color: var(--LightGrayishBlue);
+    padding: 8px;
+    border-radius: 50%;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+}
+
+.share-button:hover{
+     background-color: hsl(212, 23%, 69%);
+}
+
+.share-container{
+    position: relative;
+}
+
+.social-tooltip{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 35px;
+    background-color: var(--VeryDarkGrayishBlue);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 10px); 
+    z-index: 10; 
+}
+
+.social-tooltip::after {
+  content: ''; 
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid var(--VeryDarkGrayishBlue); 
+}
+
+.social-tooltip span {
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: var(--GrayishBlue);
+}
+
+.social-tooltip a {
+  color: white;
+  font-size: 20px;
+}
+
+.social-visible{
+    /* transition: opacity 0.3s, visibility 0.3s, transform 0.3s; */
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Responsive design */
@@ -204,4 +260,15 @@ body{
     .description{
         font-size: 0.8em;
     }
+
+    .social-tooltip{
+         padding: 8px 13px;
+         gap: 10px;
+    }
+
+    .social-tooltip span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    gap: 10px;
+}
 }
