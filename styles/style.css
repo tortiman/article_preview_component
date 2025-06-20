@@ -117,12 +117,12 @@ body{
 
 .share-button{
     border: none;
-    background-color: var(--LightGrayishBlue);
+    background-color: var(--DesaturatedDarkBlue);
     padding: 8px;
     border-radius: 50%;
     font-weight: 500;
     cursor: pointer;
-    color: white;
+    
 }
 
 .share-button:hover{
@@ -177,11 +177,6 @@ body{
   font-size: 20px;
 }
 
-.social-visible{
-    /* transition: opacity 0.3s, visibility 0.3s, transform 0.3s; */
-    opacity: 1;
-    visibility: visible;
-}
 
 /* Responsive design */
 
