@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://tortiman.github.io/article_preview_component/)
 
 ## My process
 
@@ -55,80 +55,19 @@ Users should be able to:
 
 I learned to use better the grid and flexbox properties, so how to adjust the components in the responsive designs.
 
-```html
-<body>
-  <main class="main">
-    <article class="container">
-      <img src="/images/drawers.jpg" alt="" class="image" />
-      <div class="text">
-        <p class="title">
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </p>
-        <p class="description">
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I’ve got some simple tips to help
-          you make any room feel complete.
-        </p>
-        <div class="footer">
-          <div class="author-info">
-            <img src="/images/avatar-michelle.jpg" alt="" class="michelle" />
-            <div class="name-date">
-              <p class="name">Michelle Appleton</p>
-              <p class="date">28 Jun 2020</p>
-            </div>
-          </div>
-          <div class="share-container">
-            <!-- El tooltip con los iconos sociales (inicialmente oculto) -->
-            <div id="social" class="social-tooltip">
-              <span>SHARE</span>
-              <a href="#" aria-label="Share on Facebook"
-                ><i class="fab fa-facebook-square" style="color: #ffffff"></i
-              ></a>
-              <a href="#" aria-label="Share on Twitter"
-                ><i class="fab fa-twitter" style="color: #ffffff"></i
-              ></a>
-              <a href="#" aria-label="Share on Pinterest"
-                ><i class="fab fa-pinterest" style="color: #ffffff"></i
-              ></a>
-            </div>
-
-            <!-- El botón que activa el tooltip -->
-            <button
-              id="button-social"
-              class="share-button"
-              aria-label="Show share options"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                <path
-                  fill="#fff"
-                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </article>
-  </main>
-</body>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("entrada en el js1");
+  const shareButton = document.getElementById("button-social");
+  const social = document.getElementById("social");
+  shareButton.addEventListener("click", () => {
+    console.log("click");
+    social.style.transition = "opacity 1.3s, visibility 0.3s, transform 0.3s";
+    social.style.opacity = 1;
+    social.style.visibility = "visible";
+  });
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
